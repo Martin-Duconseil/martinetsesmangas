@@ -1,0 +1,20 @@
+
+<p>
+  <strong>Titre :</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Synopsis :</strong>
+  <%= @post.content %>
+</p>
+
+<p>
+  <strong>Review :</strong>
+  <%= @post.review %>
+</p>
+
+
+<%= link_to 'Éditer', edit_post_path(@post) %>
+<%= link_to 'Supprimer', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Retour', posts_path %>
